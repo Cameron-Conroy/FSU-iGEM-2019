@@ -1,0 +1,585 @@
+{{FSU}}
+<html lang="en">
+<style>
+.container {
+  max-width: 1280px;
+  padding: 0 1.5rem;
+  margin: auto;
+  
+}
+
+.btn-main,
+.btn-light,
+.btn-dark {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-main {
+  color: #333;
+  background-color: #ffbc00;
+}
+
+.btn-light {
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.btn-dark {
+  color: #f4f4f4;
+  background-color: #333;
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"]:hover {
+  background-color: #ffbc00;
+}
+
+.bg-main {
+  background: #ffbc00;
+  color: #fff;
+}
+
+.bg-dark {
+  background: #333;
+  color: #fff;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #000;
+}
+
+.bg-medium {
+  background: #ccc;
+  color: #000;
+}
+
+.lead {
+  font-size: 1.2rem;
+  padding-top: .5rem
+}
+
+.text-center {
+  text-align: center;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.7rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 3px;
+  width: 10rem;
+  background: #ffbc00;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  position: relative;
+  background: #ffbc00;
+  overflow: hidden;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: inherit;
+  opacity: 0.9;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.item:hover:after {
+  transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+}
+.item:hover .item-image {
+  transform: scale(1.2);
+}
+.item:hover .item-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.item-image {
+  height: auto;
+  transform: translateZ(0);
+  display: block;
+  transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+.item-image:before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+  overflow: hidden;
+}
+.item-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  line-height: 0;
+}
+.item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  transform: translateY(-20%);
+  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
+    transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition-delay: 300ms;
+}
+.item-text-wrap {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.item-text-title {
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: .5rem;
+  margin: 1rem;
+color: #fff;
+
+}
+.item-text-category {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+  .item-text-bio {
+  text-align: center;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  
+  line-height: 1.6;
+  background: #fff;
+} */
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+  font-family: "Palatino, URW Palladio L, serif";
+;
+}
+h2 {
+  
+padding: 2rem;
+}
+
+img {
+  width: 100%;
+}
+
+ /* 850px  */
+    /************************************************/
+    @media only screen and (max-width: 850px) {
+        .igem_2019_team_menu {
+            width: 40%;
+        }
+        p.item-text-bio{
+            font-size: 3px;
+            font-color: clear;
+         }
+
+     h2 {
+     font-size: 4px;
+}
+    }
+
+    /*500px  */
+    /************************************************/
+    @media only screen and (max-width: 500px) {
+        .igem_2019_team_menu {
+            min-width: 100%;
+            width: 100%;
+        }
+
+       p.item-text-bio {
+         font-size: 5px;
+         }
+    }
+</style>
+
+<section id="work-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">The Team Behind...</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">
+          ...Empathy, Curiosity, and Ingenuity
+        </p>
+        <div class="items">
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/2/25/T--FSU--Meyer.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Roderick Meyer</h2>
+                <p class="item-text-category">Team Lead</p>
+                <p class="item-text-category">Major: Biological Sciences</p>
+                <p class="item-text-bio">As a member of our iGEM team, I overlooked the timely progression of the project, ensuring the successful cohesion of each interdisciplinary sub-team. I also facilitated collaborations with other iGEM teams, led team workshops, created and showcased our presentation, and helped each team member achieve their personal iGEM goal. I decided to join iGEM because it's a perfect example of the multidisciplinary environments present in every innovative workforce. As the team leader, I made it my priority to inspire and motivate our team in order to ignite empathy, curiosity, and ingenuity in the project we set out to explore. </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/a/a8/T--FSU--Gottlieb.jpg"" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Jacob Gottlieb</h2>
+                <p class="item-text-category">Associate Team Lead</p>
+                <p class="item-text-category">Major: Biological Sciences</p>
+                <p class="item-text-bio">I oversaw the team and made sure everyone was on track with their responsibilities in hopes of earning the gold medal. I chose iGEM because I have been interested in genetics ever since I was young and I truly believe genetic technology will save the world.
+</p>
+</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/7/71/T--FSU--Griesheimer.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Jessie Griesheimer</h2>
+                <p class="item-text-category">Human Practices Team Lead</p>
+                <p class="item-text-category">
+                  Major: Criminology & Biological Sciences
+                </p>
+                <p class="item-text-bio">I am a senior at Florida State University and a returning 2018 FSU iGEM member. As lead of the Human Practices team I reached out to professionals in labs, within the citrus industry, and the Florida Department of Agriculture to better understand the impact citrus greening has caused and formulate a responsible solution. Through my research and interviews, I found potential hazards to our research and worked with the Design and Modeling team to help minimize harm to the environment, while keeping the interests of grove owners in mind. </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/b/b5/T--FSU--Banana.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Hannah Pascoe</h2>
+                       <p class="item-text-category">Create Team Lead</p>
+                <p class="item-text-category">Major: Biological Sciences</p>
+                <p class="item-text-bio">As the leader of the Create Team, I implemented my previous laboratory experience into developing a practical solution for Citrus Greening. I delegated tasks to my fellow create team members and was in charge of performing experiments using molecular biology techniques. I decided to join iGEM to improve my leadership skills and to work as part of an interdisciplinary team to solve complex problems using synthetic biology. </p>
+ </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/8/8d/T--FSU--Portilla.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Juan-Martin Portilla</h2>
+                     <p class="item-text-category">Design Team Lead</p>
+                <p class="item-text-category">Major: Biological Sciences</p>
+                <p class="item-text-bio">I oversaw the design of the project and helped coordinate the group effort between modeling and create teams. Beyond meeting with different parts of our iGEM team, I also met with professors and experts to discuss our project and explore other potential solutions. I originally joined iGEM to get exposed to a research setting that wasn’t necessarily rooted in academia. </p>
+   </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/9/9d/T--FSU--Shams.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                             <h2 class="item-text-title">Shams Dhanani</h2>
+               <p class="item-text-category">Modeling Team Lead</p>
+                <p class="item-text-category">Major: Mechanical Engineering</p>
+                <p class="item-text-bio">I was responsible for the analysis of various data retrieved from our research. With a range of software and the techniques I've learned through rigorous coursework at my disposal, my responsibility was to ensure all data was set up and represented in its most rudimentary form. This allowed us to find relations in a wide data set in a short amount of time, pushing our research further.  
+</p>
+</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/1/1c/T--FSU--Conroy.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                        <h2 class="item-text-title">Cameron Conroy</h2>
+                    <p class="item-text-category">Software Team Lead</p>
+                <p class="item-text-category">Major: Computer Science & Statistics</p>
+                <p class="item-text-bio">I designed and developed the Wiki, met with local growers, and advised different aspects of the project. iGEM appealed to the broadness of my interests and its collaborative atmosphere was hard to turn down. I believe that opportunities like iGEM are paramount creative outputs that stimulate the development of intellectually curious students. Perhaps what is most exciting about iGEM is that it is not just an intersection of the scientific disciplines, but the arts, humanities, and everything in between!
+</p>
+  </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/1/1f/T--FSU--McClellan.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Kathleen McClellan</h2>
+<p class="item-text-category">Human Practices Team Member</p>
+                <p class="item-text-category">Major: Biological Sciences</p>
+            <p class="item-text-bio">As a member of the Human Practices team, I helped determine possible avenues for the project and helped to reach out and make connections with growers and other stakeholders in Florida’s citrus industry. I decided to join the iGEM team because I was excited by the idea of tackling an issue using genetic engineering, a field of biology that I had no prior experience with before iGEM.</p>
+ </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/e/e3/T--FSU--Bless.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Mezindia Blessing Nkembo</h2>
+<p class="item-text-category">Create Team Member</p>
+                <p class="item-text-category">Major: Biological Sciences</p>
+<p class="item-text-bio">As create team member, I designed and carried out the protocols to test our AMPs on our model organism E-coli. I joined the iGEM team not only because of my love for citrus and concern of the effects of citrus greening to our great state but because I felt it was a great opportunity to learn outside of lecture halls. This experience pushed me to think critically and develop new problem-solving skills.
+</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/d/db/T--FSU--Dericca.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Derica Parathundil</h2>
+                <p class="item-text-category">Human Practices Team Member</p>
+                <p class="item-text-category">Major: Biological Sciences</p>
+<p class="item-text-bio">As part of the Human Practices team, I helped contextualize the issue our project revolved around — citrus greening. Part of this involved visiting what used to be an orange grove in my hometown and compiling statistics. I joined iGEM to learn more about biology even though I am planning to study communication sciences and disorders in the near future. I have been dubbed the “cinnamon roll” of the team, but I think I earned it because I still play Roblox with my friends sometimes. </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/7/7f/T--FSU--Vasquez.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Nicholas Vazquez</h2>
+                <p class="item-text-category">Create Team Member</p>
+                <p class="item-text-category">Major: Biological Sciences & Psychology</p>
+<p class="item-text-bio">As part of the create team, I redesigned and tested audiogenetic experiments on E. Coli and assisted in AMP research. I joined IGEM because I wanted a chance to work on a team to be able to fix a problem from my community. As well as learn more about what the future of genetically engineered machines holds.
+</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/e/e0/T--FSU--Klein.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Alyssa Klein</h2>
+                <p class="item-text-category">Modeling Team Member</p>
+                <p class="item-text-category">Major: Chemical Engineering</p>
+<p class="item-text-bio">As part of the modeling team, I was involved with brainstorming and designing the physical model. I was tasked with assisting the model lead with various endeavors throughout the project. I am currently a sophomore, so my intentions with joining iGEM were to further my experience outside of the classroom in order to have a better understanding of real-world problem solving with engineering. The multidisciplinary team assisted with providing a broader view, rather than focusing on general engineering aspects. My favorite part of iGEM was being able to approach real-world issues, as these have been the most influential topics that have further increased my passion for solving problems through engineering. 
+</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/f/f5/T--FSU--Quinlan.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Conner Quinlan</h2>
+                <p class="item-text-category">Design Team Member</p>
+                <p class="item-text-category">Major: Biochemistry</p>
+<p class="item-text-bio">I worked with Juan Martinez-Portilla on the design of the antimicrobial peptide (AMP) generators.  I also worked on visualizing the structure of the AMPs. I'm a tech enthusiast with a background in IT.  I hope to continue to regenerative medicine in the future.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ </section>
+<section id="work-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">Team Advisors</h2>
+        <div class="bottom-line"></div>
+        <div class="items">
+        <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/7/77/T--FSU--Youmass.png" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Jamal Youmas</h2>
+                <p class="item-text-category"> Entrepreneurship Advisor</p>
+                <p class="item-text-category">Major: Commercial Entrepreneurship </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/d/de/T--FSU--Mitchell.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Tyler Mitchell</h2>
+                <p class="item-text-category">Marketing Advisor</p>
+                <p class="item-text-category">Major: Marketing</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/6/6a/T--FSU--ian-with-lab-coat.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Ian Schlander</h2>
+                <p class="item-text-category">Leadership Advisor</p>
+                <p class="item-text-category">2018 FSU iGEM Team Lead</p>
+
+              </div>
+            </div>
+          </div>
+<div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/0/0f/T--FSU--Kata2.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Alexandra Kata</h2>
+                <p class="item-text-category">Leadership Advisor</p>
+                <p class="item-text-category">2018 FSU iGEM Associate Team Lead</p>
+              </div>
+            </div>
+          </div>
+
+<div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/b/bd/T--FSU--Cynamon2.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Ben Cynamon</h2>
+                <p class="item-text-category"> Software Advisor</p>
+                <p class="item-text-category">2018 FSU iGEM Electronic Communications Lead </p>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/2/20/T--FSU--Quijano2.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Daniela Quijano</h2>
+                <p class="item-text-category">Create Advisor</p>
+                <p class="item-text-category">2018 FSU iGEM Create Team Lead</p>
+
+              </div>
+            </div>
+          </div>
+<div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/b/b2/T--FSU--Sigalos2.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Arianna Sigalos</h2>
+                <p class="item-text-category">Design Advisor</p>
+                <p class="item-text-category">2018 FSU iGEM Design Team Member</p>
+              </div>
+            </div>
+          </div>
+
+<div class="item">
+ <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/7/74/T--FSU--Taylor.jpg" alt="" />
+            </div>
+            <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Michael Taylor</h2>
+                <p class="item-text-category"> Design Advisor</p>
+                <p class="item-text-category">2018 FSU iGEM Design Team Lead</p>
+</div>
+            </div>
+          </div>
+           
+           
+        </div>
+      </div>
+    </section>
+</html>
