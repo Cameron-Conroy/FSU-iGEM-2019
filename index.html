@@ -1,0 +1,590 @@
+{{FSU}}
+<html>
+<style>
+
+.text-center {
+  text-align: center;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+
+.py-2 {
+  padding: 2rem 0;
+}
+
+.py-3 {
+  padding: 3rem 0;
+}
+
+.py-4 {
+  padding: 4rem 0;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+.my-2 {
+  margin: 2rem 0;
+}
+
+.my-3 {
+  margin: 3rem 0;
+}
+
+.my-4 {
+  margin: 4rem 0;
+}
+
+.section-title {
+  font-size: 2.7rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.bottom-line {
+  height: 3px;
+  width: 10rem;
+  background: #ffbc00;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  position: relative;
+  background: white;
+  overflow: hidden;
+}
+.item::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: #ffbc00;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+  transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.item:hover:after {
+  transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
+}
+.item:hover .item-image {
+  transform: scale(1.2);
+}
+.item:hover .item-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+.item-image {
+  height: auto;
+  transform: translateZ(0);
+  display: block;
+  transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1);
+}
+.item-image:before {
+  content: "";
+  display: block;
+  padding-top: 75%;
+  overflow: hidden;
+}
+.item-image img {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  bottom: 1rem;
+  top: 1rem;
+  width: 90%;
+  height: auto;
+  line-height: 0;
+  
+}
+
+.special img {
+  position: absolute;
+  top: 1rem;
+  left: 6rem;
+  bottom: 1rem;
+  top: 1rem;
+  width: auto;
+  height: 70%;
+  line-height: 0;
+  
+}
+
+  .item-image img .special {
+width: 50%;
+height: auto;
+}
+.item-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  transform: translateY(-20%);
+  transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1),
+    transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+  transition-delay: 300ms;
+}
+.item-text-wrap {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.item-text-title {
+  font-size: 1.8rem;
+  line-height: 1;
+  padding: .5rem;
+  margin: 1rem;
+color: #fff;
+
+}
+.item-text-category {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+  .item-text-bio {
+  text-align: center;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+</style>
+<head>
+  
+    
+    
+    
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header-home">
+      <video loop id="landing-page-video" class="landing-video"  playsinline autoplay muted> ==$0
+             <source src="https://2019.igem.org/wiki/images/b/bb/T--FSU--wiki_typewriter.mov" type="video/mp4"> </video>
+      <div class="container">
+       
+        <div class="header-content">
+ 
+
+         <div id="media-box">
+            
+         </div> 
+
+          
+          
+        </div>
+      </div>
+    </header>
+<link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <!-- Section A: Specialize -->
+    <section id="home-a" class="text-center py-2">
+      <div class="container">
+        <h2 class="section-title">Our Mission</h2>
+        <div class="bottom-line"></div>
+        <p class="lead">
+         To lead the movement of saving Florida’s citrus with synthetic biology in an atmosphere enriched with empathy, curiosity, and ingenuity
+
+        </p>
+        <div class="specials">
+          <div>
+            <i class="fas fa-book-dead fa-3x"></i>
+
+            <h3>Greening History</h3>
+            <p class="homep">
+              Originating in Asia, it was first discovered in Florida in the early 21<sup>st</sup> century. Now, 80% of Florida crops are infected by the disease.
+
+            </p>
+          </div>
+          <div>
+            <i class="fas fa-bug fa-3x"></i>
+            <h3>The Citrus Psyllid</h3>
+            <p class="homep">
+             Greening bacteria <i>(CLas)</i> is transmitted from tree to tree by the Asian Citrus Psyllid. When feeding on an infected tree, the psyllid ingests the bacteria and stores it in its gut, releasing it when it feeds on a new, uninfected tree.
+            </p>
+          </div>
+          <div>
+            <i class="fab fa-envira fa-3x"></i>
+            <h3>A Grower's Nightmare</h3>
+            <p class="homep">
+            Citrus greening has caused shorter life span of fruit, premature fruit drops, and smaller overall yields. The Florida citrus industry is currently in danger of eradication.
+
+            </p>
+          </div>
+          <div>
+            <i class="fas fa-user-md fa fa-3x"></i>
+            <h3>Need For a Cure</h3>
+            <p class="homep">
+             With billions of dollars at stake, the Florida citrus industry cannot afford to start from scratch. Instead, growers must treat all of their existing trees before it’s too late.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B: Stats -->
+    <section id="home-b" class="text-center py-2">
+      <div class="stats">
+        <div>
+          <ul>
+            <li><i class="fas fa-search-dollar fa-4x"></i></li>
+            <li class="stats-title">Economic Impact</li>
+            <li class="stats-number">10+ Billion           Dollars</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fa fa-leaf fa-4x"></i></li>
+            <li class="stats-title">Trees Infected</li>
+            <li class="stats-number">80% of Florida Citrus Trees</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-vial fa-4x"></i></li>
+            <li class="stats-title">Innovative Therapy</li>
+            <li class="stats-number">6 Antimicrobial Peptides</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li><i class="fas fa-cocktail fa-4x"></i></li>
+            <li class="stats-title">Antibiotic Cocktails</li>
+            <li class="stats-number">To Save Florida's Citrus</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: Process -->
+   <section id="home-c" class="text-center py-2">
+      <div class="container">
+        <h2 class="section-title">
+          Our Creative Process
+        </h2>
+        <div class="bottom-line"></div>
+        <p class="lead">
+        </p>
+        <div class="process">
+          <div>
+             <a href="https://2019.igem.org/Team:FSU/Human_Practices"><i class="fas fa-user-secret fa-4x process-icon my-2"></i></a>
+             
+            
+            <h3>Human Practices</h3>
+            <p class="homep">
+              Our Human Practices team reached out to growers across Florida to get their feedback on our potential solutions and carefully thought about how our solution could impact the health of the trees and the environment.
+            </p>
+          </div>
+          <div>
+            <a href="https://2019.igem.org/Team:FSU/Design"><i class="fas fa-dna fa-4x process-icon my-2"></i></a>
+              
+            
+            <h3>Design</h3>
+            <p class="homep">
+              Our Design Team spoke with different experts and professors, helped plan and coordinate experiments, and constructed DNA templates for the expression of antimicrobial peptides (AMPs). 
+            </p>
+          </div>
+          <div>
+            <a href="https://2019.igem.org/Team:FSU/Model"><i class="fas fa-syringe fa-4x process-icon my-2"> </i></a>
+            <h3>Model</h3>
+            <p class="homep">
+              Our Modeling Team wrote code focused on the chemical, material, and cost analyses aspects enabling growers to calculate how much AMP needs to be used when treating crops. Our engineers also built a prototype injection system to update current delivery methods to a higher standard.
+            </p>
+          </div>
+          <div>
+            <a href="https://2019.igem.org/Team:FSU/Create"> <i class="fas fa-seedling fa-4x process-icon my-2"></i></a>
+            <h3>Create</h3>
+            <p class="homep">
+             Our Create Team focused on producing antimicrobial peptides (AMPs) in a cell-free solution to combat citrus greening. We also combined multiple AMPs into a cocktail to decrease potential antibiotic resistance. 
+            </p>
+          </div>
+        </div>
+
+     
+
+
+
+
+
+
+
+      </div>
+    </section>
+
+
+  <section id="work-a" class="text-center py-3">
+      <div class="container">
+        <h2 class="section-title">Our Supporters</h2>
+        <div class="bottom-line"></div>
+       
+        <div class="items">
+
+          <div class="item">
+            <div class="item-image">
+               <img src="http://2017.igem.org/wiki/images/3/3f/FSU-Office-Provost-V.png" alt="" /> 
+            </div>
+           <a href="https://provost.fsu.edu/"><div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Office of the Provost</h2>
+                
+              </div>
+            </div> </a>
+          </div>
+
+
+ <div class="item">
+            <div class="item-image">
+               <img src="https://2019.igem.org/wiki/images/f/f7/T--FSU--Medicine.png" alt="" /> 
+            </div>
+           <a href="https://med.fsu.edu/"><div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">College of Medicine</h2>
+                
+              </div>
+            </div> </a>
+          </div>
+
+          <div class="item">
+            <div class="item-image">
+              <img src="http://2018.igem.org/wiki/images/0/02/T--FSU--CRE.png"  />
+            </div>
+            <a href="https://cre.fsu.edu/"><div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Center for Undergraduate Research and Academic Engagement</h2>
+            
+</div>
+            </div> </a>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="http://2017.igem.org/wiki/images/2/24/FSU-Office-Research-V.png"  />
+            </div>
+           <a href= "https://www.research.fsu.edu"> <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">Office of Research</h2>
+              
+              </div>
+            </div> </a>
+          </div>
+
+
+  <div class="item">
+            <div class="special">
+              <img  src="https://2019.igem.org/wiki/images/4/48/T--FSU--sga.png"  />
+            </div>
+           <a href= "http://sga.fsu.edu/rtac.shtml"> <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">FSU Student Government Association</h2>
+              
+              </div>
+            </div> </a>
+          </div>
+
+
+
+
+  <div class="item">
+            <div class="special">
+              <img  src="https://2019.igem.org/wiki/images/thumb/4/49/T--FSU--rtac.png/600px-T--FSU--rtac.png"  />
+            </div>
+           <a href= "http://sga.fsu.edu/"> <div class="item-text">
+              <div class="item-text-wrap">
+                <h2 class="item-text-title">FSU Student Government Association Resource for Travel Allocation Committee (SGA RTAC)</h2>
+              
+              </div>
+            </div> </a>
+          </div>
+
+
+
+
+
+
+          <div class="item">
+            <div class="item-image">
+              <img src="http://2017.igem.org/wiki/images/0/02/FSU-Jim-Moran-School-Entrepreneurship-V.png" alt="" />
+            </div>
+          <a href= "https://jimmoranschool.fsu.edu/">  <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">School of Entreprenuership</h2>
+                     
+ </div>
+            </div> </a>
+          </div>
+          <div class="item">
+            <div class="item-image">
+              <img src="http://2017.igem.org/wiki/images/4/48/FAMU-FSU-College-Engineering-V.png"  />
+            </div>
+           <a href="https://www.eng.famu.fsu.edu/"> <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">College of Engineering</h2>
+                   
+   </div>
+            </div> </a>
+          </div>
+
+ 
+
+
+          <div class="item">
+            <div class="item-image">
+              <img src="http://2017.igem.org/wiki/images/7/7b/FSU-College-Arts-Sciences-V.png" alt="" />
+            </div>
+          <a href="https://artsandsciences.fsu.edu/">  <div class="item-text">
+              <div class="item-text-wrap">
+                             <h2 class="item-text-title">College of Arts & Sciences</h2>
+             
+</div>
+            </div> </a>
+          </div>
+          
+ <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/5/5a/T--FSU--ifas.png" alt="" />
+            </div>
+          <a href="https://sfyl.ifas.ufl.edu/gadsden/">  <div class="item-text">
+              <div class="item-text-wrap">
+                             <h2 class="item-text-title">University of Florida  IFAS</h2>
+             
+</div>
+            </div> </a>
+          </div>
+
+
+   <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/a/ab/T--FSU--snapgene.png">
+            </div>
+        <a href= "https://www.snapgene.com/">    <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Snapgene</h2>
+
+              </div>
+            </div> </a>
+          </div>
+
+
+
+ <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/d/d6/T--FSU--idt_logo.png">
+            </div>
+        <a href= "https://www.idtdna.com/pages">    <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Integrated DNA Technologies</h2>
+
+              </div>
+            </div> </a>
+          </div>
+
+
+
+
+
+
+<div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/d/d3/T--FSU--twist.png">
+            </div>
+        <a href= "https://twistbioscience.com/">    <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Twist Bioscience</h2>
+
+              </div>
+            </div> </a>
+          </div>
+
+
+
+<div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/b/b9/T--FSU--grub.jpg" alt="" />
+            </div>
+           <a href= "https://grubkitchenandbar.com/"> <div class="item-text">
+              <div class="item-text-wrap">
+                        <h2 class="item-text-title">Grub Burger bar</h2>
+                    
+  </div>
+            </div> </a>
+          </div>
+
+
+          <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/d/dc/T--FSU--Chipotle.png"  />
+            </div>
+            <a href= "https://www.chipotle.com/"><div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Chipotle Mexican Grill</h2>
+
+ </div>
+            </div> </a>
+          </div>
+         
+
+         <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/0/03/T--FSU--agilent_logo.png"  />
+            </div>
+        <a href= "https://www.agilent.com/?gclid=Cj0KCQjwoqDtBRD-ARIsAL4pviD7-125wI3TRdMJ4ptb60Q1TX6Ww0xD3iiTYNt50Gdgj8jOybFfK1oaAqP_EALw_wcB&gclsrc=aw.ds">    <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Agilent</h2>
+
+              </div>
+            </div> </a>
+          </div>
+
+
+ <div class="item">
+            <div class="item-image">
+              <img src="https://2019.igem.org/wiki/images/2/28/T--FSU--blaze.png">
+            </div>
+        <a href= "https://blazepizza.com/">    <div class="item-text">
+              <div class="item-text-wrap">
+                                <h2 class="item-text-title">Blaze Pizza</h2>
+
+              </div>
+            </div> </a>
+          </div>
+
+        </div>
+      </div>
+ </section>
+
+   
+  
+          
+       
+
+
+  </body>
+</html>
